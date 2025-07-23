@@ -32,7 +32,7 @@ header{
 .blue-box{
     background-image: url("/images/background2.jpg");
     max-width: 100%;
-    height: 40rem;
+    height: 43rem;
     color: white;
     padding:14rem ;
     text-align: center;
@@ -57,4 +57,78 @@ header{
     background-color:#3949AB;
 }
 
+.featured-genres.white-box{
+    position: relative;
+    background-color: white;
+    max-width: 100%;
+    height: 35rem;
+}
 
+.featured-genres h3{
+    color: darkblue;
+    font-size: 2rem;
+    padding: 5rem;
+    text-align: center;
+}
+.genres-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.genres-box{
+    width: 22rem ;
+    height: 13rem;
+    background-color:rgb(246, 243, 243);
+    margin: 30px;
+    float: left; 
+}
+
+.genres-box h4{
+    color: darkblue;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.5rem;
+}
+
+.genres-box p{
+    padding: 25px;
+    text-align: center;
+}
+
+.gray-box{
+    position: relative;
+    background-color:rgb(246, 243, 243);
+    max-width: 100%;
+    height: 35rem;
+}
+
+.gray-box h3{
+    color: darkblue;
+    font-size: 2rem;
+    text-align: center;
+    padding: 5rem ;
+    padding-bottom: 2rem;
+}
+
+.small-box{
+    margin: 1rem 30rem;
+    width:40rem ;
+    height: 20rem;
+    background-color: white;
+}
+.small-box ol li{
+    padding: 1rem;
+    padding-top: 1.5rem;
+    list-style-type:inherit;
+}
+.small-box ol{
+    padding-left: 5rem;
+}
+
+footer{
+    background-color: rgb(3, 3, 110);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+}
