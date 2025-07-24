@@ -7,14 +7,18 @@
 }
 
 header{
-    padding-left: 40px;
-    display: flex;
-    max-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 4rem;
     background-color: white;
-    align-items: center;
+    display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);   
 }
 .navigation{
     display: flex;
@@ -22,39 +26,56 @@ header{
     justify-content: space-evenly;
     gap: 2;
 }
+.navigation a{
+    text-decoration: none;
+    color: darkblue;
+    font-weight: 500;
+}   
+.navigation a:hover{
+    color: #3949AB;
+    transform: scale(1.15);
+}
+.main{
+    padding-top: 5rem;
+}
 .logo{
     font-size: 1.5rem;
-    color: #3949AB;
-    color: #5E35B1;
     color: darkblue;
 }
 
 .blue-box{
     background-image: url("/images/background2.jpg");
     max-width: 100%;
-    height: 43rem;
+    height: 100vh;
     color: white;
     padding:14rem ;
     text-align: center;
 }
 .blue-box h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 3rem;
-    padding-bottom: 1rem;
+    padding-top: 5rem;
 }
 .button{
-    margin: 2rem;
-    background-color:darkblue;
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: darkblue;
     color: white;
-    border: none;
-    border-radius: 16px;
     width: 12rem;
-    padding: 12px 30px;
-    font-size: large;
-    font-weight: 400;
+    padding: 0.8rem 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .button:hover{
     background-color:#3949AB;
+    transform: scale(1.05);
 }
 
 .featured-genres.white-box{
@@ -79,9 +100,15 @@ header{
     height: 13rem;
     background-color:rgb(246, 243, 243);
     margin: 30px;
-    float: left; 
+    float: left;    
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0,0, 0.2);
+    transition: transform 0.5s ease-in-out;
 }
-
+.genres-box:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .genres-box h4{
     color: darkblue;
     text-align: center;
@@ -114,6 +141,7 @@ header{
     width:40rem ;
     height: 20rem;
     background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0,0, 0.4);
 }
 .small-box ol li{
     padding: 1rem;
