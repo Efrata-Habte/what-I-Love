@@ -52,6 +52,11 @@ header{
     margin-right: 5rem;  
     max-width: 30rem;
     height: 20rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image:hover{
+    transform: scale(1.05);
 }
 
 .white-box p,ul{
