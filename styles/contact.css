@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Merriweather","serif","san-serif";
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);   
+}
+.main{
+    padding-top: 5rem;
+}
+.navigation{
+    display: flex;
+    width: 40rem;
+    justify-content: space-evenly;
+
+}
+.logo{
+    font-size: 1.5rem;
+    color: #3949AB;
+    color: #5E35B1;
+    color: darkblue;
+
+}
+
+.gray-box{
+    max-width: 100%;
+    height: 3rem;
+    background-color: rgb(246, 243, 243);
+    margin-top: 4rem; 
+}
+.white-box{
+    max-width: 100%;
+    max-height: fit-content;
+}
+.white-box h1{
+    color: darkblue;
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+.white-box p{
+    width: 38rem;
+    text-align: center;
+    font-size: large;
+    margin: 0px auto;
+}
+
+.contact-form{
+    margin: 3rem auto;
+    padding: 2rem;
+    width: 40rem;
+    height: 53rem;
+    background-color: rgb(246, 243, 243) ;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);   
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: darkblue;
+}
+/* Text, Email, Range, Textarea inputs */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="range"],
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #5E35B1;
+    outline: none;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+}
+.options label {
+    font-weight: normal;
+    cursor: pointer;
+}
+.submit-btn {
+    margin-top: 1.5rem;
+    background-color: #5E35B1;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+footer{
+    background-color: rgb(3, 3, 110);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+}

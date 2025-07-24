@@ -3,65 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact - Fiction World</title>
     <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div>
-            Fiction World
-        </div>
-        <div>
+        <div class="logo">Fiction World</div>
+        <nav class="navigation">
             <a href="index.html">Home</a>
-        </div>
-        <div>
             <a href="about.html">About</a>
-        </div>
-        <div>
             <a href="gallery.html">Gallery</a>
-        </div>
-        <div>
-            <a href="contact.html">Contact</a>
-        </div> 
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
     </header>
-    
-    <section>
-        <div id="title">Contact Us </div>
-        <div class="gray-box">
-            <form>
-                <div>
-                    Name
-                    <input type="text" name="text" placeholder="Your name">
-                    Email
-                    <input type="email" name="email" placeholder="youremail@example.com">
-                </div>
-                <div>
-                    Favorite Genre
-                    <input type="radio" name="fav" value="Fantacy"> Fantacy
-                    <input type="radio" name="fav" value="Sci-Fi"> Sci-Fi
-                    <input type="radio" name="fav" value="Mystery"> Mystery
-                </div>
-                    <div>
-                        Preferred Format
-                        <input type="checkbox" name="pre" value="Hardcover"> Hardcover
-                        <input type="checkbox" name="pre" value="Paperback"> Paperback
-                        <input type="checkbox" name="pre" value="E-book"> E-book
-                    </div>
-                    <div>
-                        How much do you enjoy reading? (1-5)
-                        <input type="range" name="read" >
-                    </div>
-                    <div>
-                        Message
-                        <input type="text" name="message" placeholder="Share your thoughts about books...">
-                    </div>
-                    <div>
-                        <input type="submit" name="submit" >
-                    </div>
-            </form>
-        </div>
-    </section>
 
+    <div class="gray-box"></div>
+    <main>
+        <!-- Contact Section -->
+        <section class="contact-section white-box">
+            <h1>Contact Us</h1>
+            <p>Have questions, recommendations, or just want to talk about books? Fill out the form below and we’ll get back to you!</p>
+            
+            <form class="contact-form">
+                <!-- Name and Email -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+                </div>
+
+                <!-- Favorite Genre -->
+                <div class="form-group">
+                    <label>Favorite Genre</label>
+                    <div class="options">
+                        <label><input type="radio" name="fav" value="Fantasy"> Fantasy</label>
+                        <label><input type="radio" name="fav" value="Sci-Fi"> Sci-Fi</label>
+                        <label><input type="radio" name="fav" value="Mystery"> Mystery</label>
+                    </div>
+                </div>
+
+                <!-- Preferred Format -->
+                <div class="form-group">
+                    <label>Preferred Format</label>
+                    <div class="options">
+                        <label><input type="checkbox" name="format" value="Hardcover"> Hardcover</label>
+                        <label><input type="checkbox" name="format" value="Paperback"> Paperback</label>
+                        <label><input type="checkbox" name="format" value="E-book"> E-book</label>
+                    </div>
+                </div>
+
+                <!-- Reading Enjoyment -->
+                <div class="form-group">
+                    <label for="reading-level">How much do you enjoy reading? (1-5)</label>
+                    <input type="range" id="reading-level" name="reading-level" min="1" max="5">
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Share your thoughts about books..." rows="4"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
         <h4>Fiction World</h4>
         <p>icons</p>
