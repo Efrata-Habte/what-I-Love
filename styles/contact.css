@@ -27,8 +27,18 @@ header{
     display: flex;
     width: 40rem;
     justify-content: space-evenly;
-
 }
+
+.navigation a{
+    text-decoration: none;
+    color: darkblue;
+    font-weight: 500;
+}   
+.navigation a:hover{
+    color: #3949AB;
+    transform: scale(1.15);
+}
+
 .logo{
     font-size: 1.5rem;
     color: #3949AB;

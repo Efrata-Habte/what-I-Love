@@ -29,6 +29,17 @@ header{
     justify-content: space-evenly;
 
 }
+
+.navigation a{
+    text-decoration: none;
+    color: darkblue;
+    font-weight: 500;
+}   
+.navigation a:hover{
+    color: #3949AB;
+    transform: scale(1.15);
+}
+
 .logo{
     font-size: 1.5rem;
     color: #3949AB;
@@ -62,7 +73,7 @@ header{
 /* Gallery Grid Container */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    grid-template-columns: repeat(4, 1fr);  /* 3 columns */
     gap: 10px;  /* space between images */
     justify-items: center;
     padding: 2rem;
