@@ -24,7 +24,6 @@ header{
     display: flex;
     width: 40rem;
     justify-content: space-evenly;
-    gap: 2;
 }
 .navigation a{
     text-decoration: none;
