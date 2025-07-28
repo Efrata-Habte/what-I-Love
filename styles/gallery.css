@@ -1,12 +1,19 @@
+/* -------------------- IMPORT FONTS -------------------- */
+/* Import Merriweather, Manufacturing Consent, and Roboto fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+/* -------------------- GLOBAL STYLES -------------------- */
+/* Reset margin and padding for all elements; use border-box sizing; set base font family */
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: "Merriweather","serif","san-serif";
+    font-family: "Merriweather", "serif", "san-serif"; /* Note: 'san-serif' likely a typo, should be 'sans-serif' */
 }
 
-header{
+/* -------------------- HEADER -------------------- */
+/* Fixed header at the top with white background, flex layout, padding and shadow */
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,90 +21,104 @@ header{
     height: 4rem;
     background-color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* space between logo and navigation */
     align-items: center;
     padding: 0 40px;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);   
+    z-index: 1000; /* ensure header stays on top */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.main{
+
+/* -------------------- MAIN LAYOUT -------------------- */
+/* Add top padding to avoid content hidden behind fixed header */
+.main {
     padding-top: 5rem;
 }
-.navigation{
+
+/* Navigation container styled as flex with even spacing */
+.navigation {
     display: flex;
     width: 40rem;
     justify-content: space-evenly;
-
 }
 
-.navigation a{
+/* Navigation links style */
+.navigation a {
     text-decoration: none;
     color: darkblue;
     font-weight: 500;
     transition: transform 0.5s ease-in-out;
-
-}   
-.navigation a:hover{
-    color: #3949AB;
-    transform: scale(1.15);
-    border-top: 3px solid rgb(211, 207, 207)     ;
-
 }
 
-.logo{
+/* Navigation links hover effect: color change, scale up and border top */
+.navigation a:hover {
+    color: #3949AB;
+    transform: scale(1.15);
+    border-top: 3px solid rgb(211, 207, 207);
+}
+
+/* Logo text with multiple color declarations, last one applies */
+.logo {
     font-size: 1.5rem;
     color: #3949AB;
     color: #5E35B1;
-    color: darkblue;
-
+    color: darkblue; /* final applied color */
 }
 
-.gray-box{
+/* -------------------- BOXES -------------------- */
+/* Gray box with fixed height and light background for spacing or section breaks */
+.gray-box {
     max-width: 100%;
     height: 3rem;
     background-color: rgb(246, 243, 243);
-    margin-top: 4rem; 
+    margin-top: 4rem;
 }
-.white-box{
+
+/* White box with flexible height */
+.white-box {
     max-width: 100%;
     max-height: fit-content;
 }
-.white-box h1{
+
+/* Heading inside white box: centered, dark blue color, with margin and padding */
+.white-box h1 {
     color: darkblue;
     text-align: center;
     font-size: 2rem;
     margin: 1rem;
     padding: 1rem;
 }
-.white-box p{
+
+/* Paragraph inside white box: centered, large font */
+.white-box p {
     text-align: center;
     font-size: large;
 }
 
-/* Gallery Grid Container */
+/* -------------------- GALLERY GRID -------------------- */
+/* Grid container for gallery items with 4 equal columns, spacing, and centered content */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);  /* 3 columns */
-    gap: 10px;  /* space between images */
+    grid-template-columns: repeat(4, 1fr);  /* 4 columns */
+    gap: 10px;  /* space between grid items */
     justify-items: center;
     padding: 2rem;
 }
 
-/* Style individual images */
+/* Individual gallery images styling: responsive width, max width, rounded corners, smooth hover scale */
 .gallery-grid img {
-    width: 100%; /* make images fit their grid cell */
+    width: 100%; /* fill grid cell */
     max-width: 250px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect for interactivity */
+/* Hover effect on gallery images for interactivity */
 .gallery-grid img:hover {
     transform: scale(1.05);
 }
 
-/* Center captions */
+/* Center captions below images */
 .gallery-grid figcaption {
     text-align: center;
     margin-top: 0.5rem;
@@ -105,12 +126,14 @@ header{
     color: #3949AB;
 }
 
-footer{
+/* -------------------- FOOTER -------------------- */
+/* Gradient background from dark to lighter blue, white text, horizontal flex layout */
+footer {
     background: linear-gradient(
-    to right, 
-    #0a1a3f,  /* Very dark navy blue */
-    #122b6b,  /* Deep blue */
-    #1f4aa3   /* Slightly lighter blue for contrast */
+        to right,
+        #0a1a3f,  /* Very dark navy blue */
+        #122b6b,  /* Deep blue */
+        #1f4aa3   /* Slightly lighter blue */
     );
     color: white;
     display: flex;
@@ -118,37 +141,42 @@ footer{
     align-items: center;
     height: 4rem;
 }
-.icon-cap{
+
+/* Footer icon links styled in whitesmoke, no underline */
+.icon-cap {
     color: whitesmoke;
     text-decoration: none;
 }
-.icon-cap:hover{
+
+/* Footer icon links get underline on hover */
+.icon-cap:hover {
     border-bottom: 3px solid whitesmoke;
 }
 
-
 /* ----------- RESPONSIVENESS ----------- */
 
-/* Mobile screens */
+/* Adjust styles for screens 768px and smaller (mobile/tablet) */
 @media (max-width: 768px) {
+    /* Stack header vertically and add padding */
     header {
         flex-direction: column;
         height: auto;
         padding: 1rem;
     }
+    /* Navigation full width, centered, with spacing */
     .navigation {
         width: 100%;
         justify-content: center;
         gap: 1rem;
     }
+    /* Gallery grid changes to 2 columns */
     .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);  /* 2 columns */
-}
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+    }
+    /* Footer stacks vertically with padding */
     footer {
         flex-direction: column;
         height: auto;
         padding: 1rem;
     }
 }
-
-

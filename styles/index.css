@@ -1,5 +1,10 @@
+/* -------------------- IMPORT FONTS -------------------- */
+/* Import multiple Google Fonts including Manufacturing Consent, Merriweather, Roboto, and Arima */
 @import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* -------------------- GLOBAL STYLES -------------------- */
+/* Reset margin and padding, set border-box sizing and base font family */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +12,8 @@
     font-family: "Merriweather","serif","sans-serif";
 }
 
+/* -------------------- HEADER -------------------- */
+/* Fixed top header with white background and shadow, flex layout */
 header {
     position: fixed;
     top: 0;
@@ -22,6 +29,7 @@ header {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation menu styled as flex container with even spacing and wrapping */
 .navigation {
     display: flex;
     width: 40rem;
@@ -29,6 +37,7 @@ header {
     flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
+/* Navigation links styling and smooth transform on hover */
 .navigation a {
     text-decoration: none;
     color: darkblue;
@@ -36,22 +45,26 @@ header {
     transition: transform 0.5s ease-in-out;
 }
 
+/* Navigation link hover effect: color change, scale up, and border top */
 .navigation a:hover {
     color: #3949AB;
     transform: scale(1.15);
-    border-top: 3px solid rgb(211, 207, 207) ;
-
+    border-top: 3px solid rgb(211, 207, 207);
 }
 
+/* -------------------- MAIN LAYOUT -------------------- */
+/* Add top padding to avoid overlap with fixed header */
 .main {
     padding-top: 5rem;
 }
 
+/* Logo text styling */
 .logo {
     font-size: 1.5rem;
     color: darkblue;
 }
 
+/* Blue background box with full viewport height and centered text */
 .blue-box {
     background-image: url("/images/background2.jpg");
     background-repeat: no-repeat;
@@ -64,20 +77,24 @@ header {
     text-align: center;
 }
 
+/* Heading inside blue-box centered with specific serif fonts */
 .blue-box h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     padding-top: 5rem;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.blue-box p{
+
+/* Paragraph styling inside blue-box */
+.blue-box p {
     padding: 10px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.2rem;
 }
 
+/* Button styling: block element with dark blue background, white text, rounded corners */
 .button {
     display: inline-block;
     margin-top: 2rem;
@@ -93,11 +110,13 @@ header {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Button hover effect: lighter blue background and slight scale up */
 .button:hover {
     background-color: #3949AB;
     transform: scale(1.05);
 }
 
+/* White box container for featured genres with fixed height */
 .featured-genres.white-box {
     position: relative;
     background-color: white;
@@ -105,6 +124,7 @@ header {
     height: 35rem;
 }
 
+/* Heading inside featured genres box */
 .featured-genres h3 {
     color: darkblue;
     font-size: 2rem;
@@ -112,17 +132,19 @@ header {
     text-align: center;
 }
 
+/* Container for genres using flexbox, centered with gap */
 .genres-container {
     display: flex;
-    flex-wrap: wrap;        
-    justify-content: center; 
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
     padding: 1rem;
 }
 
+/* Individual genre box with flexible width, shadow, and hover scale effect */
 .genres-box {
-    flex: 1 1 20rem;         
-    max-width: 22rem;       
+    flex: 1 1 20rem;
+    max-width: 22rem;
     height: 13rem;
     background-color: rgb(246, 243, 243);
     margin-bottom: 1rem;
@@ -136,7 +158,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Genre box heading styling */
 .genres-box h4 {
     color: darkblue;
     text-align: center;
@@ -144,11 +166,13 @@ header {
     font-size: 1.5rem;
 }
 
+/* Genre box paragraph styling */
 .genres-box p {
     padding: 25px;
     text-align: center;
 }
 
+/* Gray background container with fixed height */
 .gray-box {
     position: relative;
     background-color: rgb(246, 243, 243);
@@ -156,6 +180,7 @@ header {
     height: 35rem;
 }
 
+/* Heading inside gray box */
 .gray-box h3 {
     color: darkblue;
     font-size: 2rem;
@@ -164,6 +189,7 @@ header {
     padding-bottom: 2rem;
 }
 
+/* Small white box with shadow, centered */
 .small-box {
     margin: 1rem auto;
     width: 40rem;
@@ -172,19 +198,22 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0,0, 0.4);
 }
 
+/* Ordered list item padding */
 .small-box ol li {
     padding: 1rem;
     padding-top: 1.5rem;
     list-style-type: inherit;
 }
 
+/* Ordered list padding */
 .small-box ol {
     padding-left: 5rem;
 }
 
+/* Footer with gradient background, white text, flex layout */
 footer {
     background: linear-gradient(
-        to right, 
+        to right,
         #0a1a3f,
         #122b6b,
         #1f4aa3
@@ -198,11 +227,14 @@ footer {
     text-align: center;
 }
 
-.icon-cap{
+/* Footer icons link styling */
+.icon-cap {
     color: whitesmoke;
     text-decoration: none;
 }
-.icon-cap:hover{
+
+/* Footer icons link hover underline */
+.icon-cap:hover {
     border-bottom: 3px solid whitesmoke;
 }
 
@@ -210,9 +242,11 @@ footer {
 
 /* Tablets and smaller laptops */
 @media (max-width: 1024px) {
+    /* Reduce blue-box padding */
     .blue-box {
         padding: 8rem 2rem;
     }
+    /* Small box width 80% */
     .small-box {
         width: 80%;
     }
@@ -220,16 +254,19 @@ footer {
 
 /* Mobile screens */
 @media (max-width: 768px) {
+    /* Header stacked vertically */
     header {
         flex-direction: column;
         height: auto;
         padding: 1rem;
     }
+    /* Navigation full width, centered with gaps */
     .navigation {
         width: 100%;
         justify-content: center;
         gap: 1rem;
     }
+    /* Blue box padding and font size adjustments */
     .blue-box {
         padding: 6rem 1rem;
         text-align: center;
@@ -237,15 +274,19 @@ footer {
     .blue-box h1 {
         font-size: 2rem;
     }
+    /* Button width auto */
     .button {
         width: auto;
     }
-    .featured-genres.white-box{
+    /* Featured genres height auto */
+    .featured-genres.white-box {
         height: auto;
     }
-    .small-box{
+    /* Small box taller */
+    .small-box {
         height: 22rem;
     }
+    /* Footer stacked vertically */
     footer {
         flex-direction: column;
         height: auto;
@@ -255,13 +296,16 @@ footer {
 
 /* Very small devices (phones <480px) */
 @media (max-width: 480px) {
+    /* Smaller font size for blue box heading */
     .blue-box h1 {
         font-size: 1.5rem;
     }
+    /* Genres box full width with margin */
     .genres-box {
         width: 90%;
         margin: 1rem auto;
     }
+    /* Small box almost full width and taller */
     .small-box {
         width: 95%;
         height: 22rem;

@@ -1,12 +1,19 @@
+/* -------------------- IMPORT FONTS -------------------- */
+/* Import Merriweather font family from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+/* -------------------- GLOBAL STYLES -------------------- */
+/* Reset margin and padding for all elements, set border-box sizing, and base font family */
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: "Merriweather","serif","san-serif";
+    font-family: "Merriweather", "serif", "san-serif"; /* Note: "san-serif" typo, should be "sans-serif" */
 }
 
-header{
+/* -------------------- HEADER -------------------- */
+/* Fixed header bar at top, full width, white background, with subtle shadow */
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,80 +21,98 @@ header{
     height: 4rem;
     background-color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* space between logo and navigation */
     align-items: center;
     padding: 0 40px;
-    z-index: 1000;
+    z-index: 1000; /* appear on top */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);   
 }
-.main{
+
+/* -------------------- MAIN LAYOUT -------------------- */
+/* Add top padding to main content to avoid being hidden behind fixed header */
+.main {
     padding-top: 5rem;
 }
-.navigation{
+
+/* Navigation container styled as horizontal flexbox with even spacing */
+.navigation {
     display: flex;
     width: 40rem;
     justify-content: space-evenly;
 }
 
-.navigation a{
+/* Style navigation links with no underline, dark blue color, and smooth scaling on hover */
+.navigation a {
     text-decoration: none;
     color: darkblue;
     font-weight: 500;
     transition: transform 0.5s ease-in-out;
-
-}   
-.navigation a:hover{
-    color: #3949AB;
-    transform: scale(1.15);
-    border-top: 3px solid rgb(211, 207, 207) ;
-
 }
 
-.logo{
+/* Navigation link hover effect: color change, scale up, and a border on top */
+.navigation a:hover {
+    color: #3949AB;
+    transform: scale(1.15);
+    border-top: 3px solid rgb(211, 207, 207);
+}
+
+/* Logo text styling - multiple color declarations, the last (darkblue) takes effect */
+.logo {
     font-size: 1.5rem;
     color: #3949AB;
     color: #5E35B1;
-    color: darkblue;
-
+    color: darkblue; /* This color is applied */
 }
 
-.gray-box{
+/* -------------------- BOX STYLES -------------------- */
+
+/* Gray box with light gray background, fixed height, margin top for spacing */
+.gray-box {
     max-width: 100%;
     height: 3rem;
     background-color: rgb(246, 243, 243);
     margin-top: 4rem; 
 }
-.white-box{
+
+/* White box container with flexible height */
+.white-box {
     max-width: 100%;
     max-height: fit-content;
 }
-.white-box h1{
+
+/* Heading inside white box: centered, dark blue, with padding and margin */
+.white-box h1 {
     color: darkblue;
     text-align: center;
     font-size: 2rem;
     margin: 1rem;
     padding: 1rem;
 }
-.white-box p{
+
+/* Paragraph inside white box: centered, fixed width, large font */
+.white-box p {
     width: 38rem;
     text-align: center;
     font-size: large;
-    margin: 0px auto;
+    margin: 0px auto; /* center horizontally */
 }
 
-.contact-form{
+/* -------------------- CONTACT FORM -------------------- */
+/* Container styling: centered, fixed width & height, light background, rounded corners, subtle shadow */
+.contact-form {
     margin: 3rem auto;
     padding: 2rem;
     width: 40rem;
     height: 53rem;
-    background-color: rgb(246, 243, 243) ;
+    background-color: rgb(246, 243, 243);
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);   
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-;
 }
+
+/* Form groups arranged vertically, font styling */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -95,12 +120,14 @@ header{
     color: #333;
 }
 
+/* Labels in form groups: bottom margin, bold, dark blue */
 .form-group label {
     margin-bottom: 0.5rem;
     font-weight: bold;
     color: darkblue;
 }
-/* Text, Email, Range, Textarea inputs */
+
+/* Input fields and textarea styling: padding, border, rounded corners, font size, smooth border-color transition */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="range"],
@@ -112,20 +139,27 @@ header{
     transition: border-color 0.3s ease;
 }
 
+/* Input focus styling: purple border, no outline */
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
     border-color: #5E35B1;
     outline: none;
 }
+
+/* Options container arranged in column */
 .options {
     display: flex;
     flex-direction: column;
 }
+
+/* Option labels normal weight and pointer cursor */
 .options label {
     font-weight: normal;
     cursor: pointer;
 }
+
+/* Submit button styling: purple background, white text, padding, rounded corners, bold font, pointer cursor, transition */
 .submit-btn {
     margin-top: 1.5rem;
     background-color: #5E35B1;
@@ -139,12 +173,14 @@ header{
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-footer{
+/* -------------------- FOOTER -------------------- */
+/* Gradient background with various shades of blue, white text, horizontal flex layout */
+footer {
     background: linear-gradient(
-    to right, 
-    #0a1a3f,  /* Very dark navy blue */
-    #122b6b,  /* Deep blue */
-    #1f4aa3   /* Slightly lighter blue for contrast */
+        to right, 
+        #0a1a3f,  /* Very dark navy blue */
+        #122b6b,  /* Deep blue */
+        #1f4aa3   /* Slightly lighter blue for contrast */
     );
     color: white;
     display: flex;
@@ -152,32 +188,42 @@ footer{
     align-items: center;
     height: 4rem;
 }
-.icon-cap{
+
+/* Footer icon links styled as whitesmoke with no underline */
+.icon-cap {
     color: whitesmoke;
     text-decoration: none;
 }
-.icon-cap:hover{
+
+/* Footer icon links underline on hover */
+.icon-cap:hover {
     border-bottom: 3px solid whitesmoke;
 }
 
-/* Mobile screens */
+/* -------------------- RESPONSIVE STYLES -------------------- */
+/* On mobile screens under 768px wide */
 @media (max-width: 768px) {
+    /* Header stacked vertically, padding added */
     header {
         flex-direction: column;
         height: auto;
         padding: 1rem;
     }
+    /* Navigation takes full width, centered with gap */
     .navigation {
         width: 100%;
         justify-content: center;
         gap: 1rem;
     }
-    .contact-form{
+    /* Contact form becomes 80% width */
+    .contact-form {
         width: 80%;
     }
-    .white-box p{
+    /* White box paragraph width increases */
+    .white-box p {
         width: 80%;
     }
+    /* Footer stacks vertically, height auto and padding added */
     footer {
         flex-direction: column;
         height: auto;
