@@ -33,6 +33,7 @@ header {
     text-decoration: none;
     color: darkblue;
     font-weight: 500;
+    transition: transform 0.5s ease-in-out;
 }
 
 .navigation a:hover {
@@ -113,27 +114,21 @@ header {
 
 .genres-container {
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;        
+    justify-content: center; 
     gap: 1.5rem;
     padding: 1rem;
-    
-    overflow-x: auto;          /* Enable horizontal scroll */
-    scroll-snap-type: x mandatory; /* Smooth snapping */
-    
-    -webkit-overflow-scrolling: touch; /* Smooth on iOS */
 }
 
 .genres-box {
-    margin: auto;
-    flex: 0 0 auto;           /* Prevent shrinking */
-    width: 22rem;
+    flex: 1 1 20rem;         
+    max-width: 22rem;       
     height: 13rem;
     background-color: rgb(246, 243, 243);
     margin-bottom: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     transition: transform 0.5s ease-in-out;
-    scroll-snap-align:  start; /* Snap each box nicely */
 }
 
 .genres-box:hover {
@@ -203,6 +198,14 @@ footer {
     text-align: center;
 }
 
+.icon-cap{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.icon-cap:hover{
+    border-bottom: 3px solid whitesmoke;
+}
+
 /* ----------- RESPONSIVENESS ----------- */
 
 /* Tablets and smaller laptops */
@@ -236,6 +239,9 @@ footer {
     }
     .button {
         width: auto;
+    }
+    .featured-genres.white-box{
+        height: auto;
     }
     .small-box{
         height: 22rem;

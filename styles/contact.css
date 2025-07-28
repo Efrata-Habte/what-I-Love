@@ -33,6 +33,8 @@ header{
     text-decoration: none;
     color: darkblue;
     font-weight: 500;
+    transition: transform 0.5s ease-in-out;
+
 }   
 .navigation a:hover{
     color: #3949AB;
@@ -150,6 +152,13 @@ footer{
     align-items: center;
     height: 4rem;
 }
+.icon-cap{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.icon-cap:hover{
+    border-bottom: 3px solid whitesmoke;
+}
 
 /* Mobile screens */
 @media (max-width: 768px) {
@@ -164,6 +173,9 @@ footer{
         gap: 1rem;
     }
     .contact-form{
+        width: 80%;
+    }
+    .white-box p{
         width: 80%;
     }
     footer {

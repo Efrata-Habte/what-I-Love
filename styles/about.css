@@ -166,6 +166,14 @@ footer {
     width: 100%;
 }
 
+.icon-cap{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.icon-cap:hover{
+    border-bottom: 3px solid whitesmoke;
+}
+
 
 /* ----------- RESPONSIVENESS ----------- */
 
