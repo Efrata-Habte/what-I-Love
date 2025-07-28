@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: "Merriweather","serif","san-serif";
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather","serif","sans-serif";
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -18,46 +19,65 @@ header{
     align-items: center;
     padding: 0 40px;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);   
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.navigation{
+
+.navigation {
     display: flex;
     width: 40rem;
     justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
-.navigation a{
+
+.navigation a {
     text-decoration: none;
     color: darkblue;
     font-weight: 500;
-}   
-.navigation a:hover{
+}
+
+.navigation a:hover {
     color: #3949AB;
     transform: scale(1.15);
+    border-top: 3px solid rgb(211, 207, 207) ;
+
 }
-.main{
+
+.main {
     padding-top: 5rem;
 }
-.logo{
+
+.logo {
     font-size: 1.5rem;
     color: darkblue;
 }
 
-.blue-box{
+.blue-box {
     background-image: url("/images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     max-width: 100%;
     height: 100vh;
     color: white;
-    padding:14rem ;
+    padding: 14rem;
     text-align: center;
 }
-.blue-box h1{
+
+.blue-box h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     padding-top: 5rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.button{
+.blue-box p{
+    padding: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+}
+
+.button {
     display: inline-block;
     margin-top: 2rem;
     background-color: darkblue;
@@ -72,90 +92,172 @@ header{
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.button:hover{
-    background-color:#3949AB;
+.button:hover {
+    background-color: #3949AB;
     transform: scale(1.05);
 }
 
-.featured-genres.white-box{
+.featured-genres.white-box {
     position: relative;
     background-color: white;
     max-width: 100%;
     height: 35rem;
 }
 
-.featured-genres h3{
+.featured-genres h3 {
     color: darkblue;
     font-size: 2rem;
     padding: 5rem;
     text-align: center;
 }
-.genres-container{
+
+.genres-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 1rem;
+    
+    overflow-x: auto;          /* Enable horizontal scroll */
+    scroll-snap-type: x mandatory; /* Smooth snapping */
+    
+    -webkit-overflow-scrolling: touch; /* Smooth on iOS */
 }
-.genres-box{
-    width: 22rem ;
+
+.genres-box {
+    margin: auto;
+    flex: 0 0 auto;           /* Prevent shrinking */
+    width: 22rem;
     height: 13rem;
-    background-color:rgb(246, 243, 243);
-    margin: 30px;
-    float: left;    
+    background-color: rgb(246, 243, 243);
+    margin-bottom: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0,0, 0.2);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     transition: transform 0.5s ease-in-out;
+    scroll-snap-align:  start; /* Snap each box nicely */
 }
-.genres-box:hover{
+
+.genres-box:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.genres-box h4{
+
+
+.genres-box h4 {
     color: darkblue;
     text-align: center;
     padding: 15px;
     font-size: 1.5rem;
 }
 
-.genres-box p{
+.genres-box p {
     padding: 25px;
     text-align: center;
 }
 
-.gray-box{
+.gray-box {
     position: relative;
-    background-color:rgb(246, 243, 243);
+    background-color: rgb(246, 243, 243);
     max-width: 100%;
     height: 35rem;
 }
 
-.gray-box h3{
+.gray-box h3 {
     color: darkblue;
     font-size: 2rem;
     text-align: center;
-    padding: 5rem ;
+    padding: 5rem;
     padding-bottom: 2rem;
 }
 
-.small-box{
-    margin: 1rem 30rem;
-    width:40rem ;
+.small-box {
+    margin: 1rem auto;
+    width: 40rem;
     height: 20rem;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0,0, 0.4);
 }
-.small-box ol li{
+
+.small-box ol li {
     padding: 1rem;
     padding-top: 1.5rem;
-    list-style-type:inherit;
+    list-style-type: inherit;
 }
-.small-box ol{
+
+.small-box ol {
     padding-left: 5rem;
 }
 
-footer{
-    background-color: rgb(3, 3, 110);
+footer {
+    background: linear-gradient(
+        to right, 
+        #0a1a3f,
+        #122b6b,
+        #1f4aa3
+    );
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 4rem;
+    flex-wrap: wrap; /* Prevent overflow */
+    text-align: center;
+}
+
+/* ----------- RESPONSIVENESS ----------- */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .blue-box {
+        padding: 8rem 2rem;
+    }
+    .small-box {
+        width: 80%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    .navigation {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .blue-box {
+        padding: 6rem 1rem;
+        text-align: center;
+    }
+    .blue-box h1 {
+        font-size: 2rem;
+    }
+    .button {
+        width: auto;
+    }
+    .small-box{
+        height: 22rem;
+    }
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+}
+
+/* Very small devices (phones <480px) */
+@media (max-width: 480px) {
+    .blue-box h1 {
+        font-size: 1.5rem;
+    }
+    .genres-box {
+        width: 90%;
+        margin: 1rem auto;
+    }
+    .small-box {
+        width: 95%;
+        height: 22rem;
+    }
 }

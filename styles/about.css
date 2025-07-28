@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: "Merriweather","serif","san-serif";
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", "serif", "sans-serif";
 }
 
-header{
+/* Header */
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -18,93 +20,114 @@ header{
     align-items: center;
     padding: 0 40px;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);   
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-.navigation{
+
+.logo {
+    font-size: 1.5rem;
+    color: darkblue;
+}
+
+.navigation {
     display: flex;
     width: 40rem;
     justify-content: space-evenly;
 }
 
-.navigation a{
+.navigation a {
     text-decoration: none;
     color: darkblue;
     font-weight: 500;
     transition: transform 0.3s ease-in-out;
 }
 
-.navigation a:hover{
+
+.navigation a:hover {
     color: #3949AB;
     transform: scale(1.15);
+    border-top: 3px solid rgb(211, 207, 207) ;
 }
 
-.logo{
-    font-size: 1.5rem;
-    color: darkblue;
-}
-.main{
+/* Layout */
+.main {
     padding-top: 4rem;
 }
-.gray-box{
+
+.gray-box {
     max-width: 100%;
     height: 3rem;
     background-color: rgb(246, 243, 243);
-    margin-top: 4rem; 
+    margin-top: 4rem;
+}
 
-}
-.white-box{
+.white-box {
     max-width: 100%;
-    height: 40rem;
+    height: auto;
+    padding: 2rem;
 }
-.white-box h1{
+
+.white-box h1 {
     color: darkblue;
     text-align: center;
     font-size: 2rem;
     margin: 1rem;
-    padding: 1rem;
 }
-.image{
+
+/* Image floats right on large screens */
+.image {
     float: right;
-    margin: 3rem 4rem;  
+    margin: 3rem 4rem;
     border-radius: 20px;
-    box-shadow: rgb(246, 243, 243);
-    margin-right: 5rem;  
     max-width: 30rem;
     height: 20rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
 }
 
-.image:hover{
+.image:hover {
     transform: scale(1.05);
-    opacity: .9;
+    opacity: 0.9;
 }
 
-.white-box p,ul{
+/* Scrollable text container */
+.scroll {
+    max-height: 30rem;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.white-box p, 
+.white-box ul {
     margin: 2rem 3rem;
     text-align: justify;
-    font-size: 1.5 rem;
+    font-size: 1rem;
     line-height: 1.8;
-    
+    text-transform:capitalize ;
 }
-.white-box h3{
+
+.white-box h3 {
     color: darkblue;
     font-size: 1.5rem;
     margin-left: 3rem;
 }
 
-.reading-stats{
+/* Reading stats */
+
+.reading-stats {
     background-color: rgb(246, 243, 243);
     max-width: 100%;
-    height: 30rem;
+    min-height: 22rem;
+    height: auto;
+    padding: 2rem 0;
 }
-.reading-stats h2{
+
+.reading-stats h2 {
     color: darkblue;
     text-align: center;
     font-size: 2rem;
-    margin: 1rem;
-    padding: 2rem ;
+    margin-bottom: 1.5rem;
 }
+
 
 table {
     width: 40%;
@@ -112,7 +135,6 @@ table {
     margin: 1rem 3rem;
     float: right;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-
 }
 
 table th, table td {
@@ -122,27 +144,85 @@ table th, table td {
 }
 
 table th {
-    background-color: #D1C4E9;
     background-color: rgb(9, 9, 137);
-    color: #333;
     color: whitesmoke;
 }
-.reading-stats p{
+
+.reading-stats p {
     font-size: 1rem;
     line-height: 1.8;
-    margin-top: 5rem;
-    margin-left: 3rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    margin: 1rem 3rem;
     text-align: justify;
-    
 }
-footer{
+
+/* Footer */
+footer {
     background-color: rgb(3, 3, 110);
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 4rem;
+    width: 100%;
 }
 
+
+/* ----------- RESPONSIVENESS ----------- */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+    .image {
+        max-width: 50%;
+        height: auto;
+    }
+    table {
+        width: 60%;
+    }
+}
+
+/* Mobiles (≤768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    .navigation {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .image {
+        float: none;
+        display: block;
+        max-width: 90%;
+        margin: 1rem auto;
+        height: auto;
+    }
+    table {
+        width: 100%;
+        float: none;
+        margin: 1rem auto;
+    }
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+}
+
+/* Small Phones (≤480px) */
+@media (max-width: 480px) {
+    .white-box h1,
+    .reading-stats h2 {
+        font-size: 1.5rem;
+    }
+    table {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    .scroll {
+        max-height: 20rem;
+    }
+}

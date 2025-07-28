@@ -38,6 +38,8 @@ header{
 .navigation a:hover{
     color: #3949AB;
     transform: scale(1.15);
+    border-top: 3px solid rgb(211, 207, 207)     ;
+
 }
 
 .logo{
@@ -102,10 +104,42 @@ header{
 }
 
 footer{
-    background-color: rgb(3, 3, 110);
+    background: linear-gradient(
+    to right, 
+    #0a1a3f,  /* Very dark navy blue */
+    #122b6b,  /* Deep blue */
+    #1f4aa3   /* Slightly lighter blue for contrast */
+    );
     color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 4rem;
 }
+
+
+/* ----------- RESPONSIVENESS ----------- */
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    .navigation {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+}
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+}
+
+
